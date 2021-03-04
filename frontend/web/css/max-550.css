@@ -1,0 +1,43 @@
+@media all and (max-width: 550px) {
+    #hemp-cotton-text .material{
+        font-size: 1.3em;
+        letter-spacing: 8px;
+    }
+
+    #cotton-text::before{
+        top: 3px;
+    }
+
+    #hemp-text::after{
+        top: 3px;
+    }
+
+    #hemp-cotton-text .argumento{
+        padding: 0 10%;
+    }
+
+    #hemp-cotton-popup{
+        padding: 50px 10px;
+    }
+
+    .grid-productos{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+          "pr1"
+          "pr2"
+          "pr3"
+          "pr4"
+          "pr5"
+          "pr6"
+          "pr7"
+          "pr8";
+          margin: 0 auto;
+          margin-bottom: 70px;
+    }
+
+    #home video{
+        left: -110%;
+    }
+}

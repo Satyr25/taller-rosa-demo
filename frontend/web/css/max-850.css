@@ -1,0 +1,310 @@
+@media all and (max-width: 850px) {
+
+    .home .footer{
+        bottom: -60px;
+    }
+
+    .full-screen,
+    body, html{
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .home .full-screen,
+    .contact .full-screen,
+    body.home,
+    body.contact,
+    {
+        height: 100vh;
+    }
+
+    #menu.menu a{
+        font-size: 1.2em;
+    }
+
+    #home{
+        background-image: url('../images/home.png');
+    }
+
+    .logotipo{
+        bottom: 10%;
+        left: 0;
+        margin: 0 auto;
+        right: 0;
+        width: 55%;
+    }
+
+    #stockists #contenido-stockists {
+        background-size: auto 100%;
+        width: 500px;
+    }
+
+    #stockist-1{
+        padding-right: 30%;
+    }
+
+    #stockist-2{
+        padding-right: 25%;
+    }
+
+    #stockist-3{
+        padding-right: 20%;
+    }
+
+    #stockist-4{
+        padding-right: 15%;
+    }
+
+    body.taller{
+        background-color: #B9B6C1;
+    }
+
+    #texto-taller, #imagen-taller{
+        padding-bottom: 50px;
+    }
+
+    #info-taller{
+        display: block;
+        height: auto;
+    }
+
+    #imagen-taller{
+        display: none;
+        padding: 0;
+    }
+
+    #imagen-taller-mobile{
+        background-size: 100% auto;
+        height: 500px;
+    }
+
+    #imagen-taller-mobile,
+    #texto-taller{
+        display: block;
+        width: 100%;
+    }
+
+    #texto-taller{
+        height: 500px;
+        font-size: 1em;
+    }
+
+    #texto-taller h2{
+        display: none;
+    }
+
+    #taller-blanco{
+        background-size: auto 100%;
+    }
+
+    #info-taller-blanco,
+    #info-taller-blanco > div{
+        display: block;
+        width: 100%;
+    }
+
+    #info-taller-blanco #texto-taller .contenido,
+    #info-taller-blanco #texto-taller .titulo,
+    #info-taller-blanco #coming-soon div{
+        position: relative;
+    }
+
+    #texto-taller,
+    #coming-soon{
+        height: auto;
+    }
+
+    #info-taller-blanco #texto-taller .titulo h2{
+        display: block;
+        font-size: 1.5em;
+        letter-spacing: 10px;
+        margin: 0;
+        padding: 70px 0 0 0;
+        text-align: center;
+    }
+
+    #info-taller-blanco #texto-taller .contenido{
+        margin-top: 50%;
+        padding: 0 15%;
+        text-align: justify;
+    }
+
+    #info-taller-blanco #coming-soon{
+        padding: 70px 0;
+    }
+
+    body.stockists{
+        background-size: auto 100%;
+        background-position: right center;
+    }
+
+    #stockists #contenido-stockists{
+        position: relative;
+        width: 70%;
+        margin-left: 30%;
+        margin-top: 100px;
+    }
+
+    #info-contact,
+    #imagen-contact,
+    #texto-contact{
+        display: block;
+        width: 100%;
+    }
+
+    #info-contact{
+        height: 100vh;
+        position: relative;
+    }
+
+    #imagen-contact{
+        height: 100%;
+    }
+
+    #texto-contact{
+        position: absolute;
+        bottom: 20%;
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+    }
+
+    #texto-contact br{
+        display: none;
+    }
+
+    #texto-contact .direccion br{
+        display: block;
+    }
+
+    #texto-contact a{
+        color: #fff;
+    }
+
+    #texto-contact .telefono{
+        margin: 10px 0;
+    }
+
+    #information{
+        background-image: url('../images/information.jpg');
+        height: auto;
+        min-height: 100%;
+    }
+
+    #information > div,
+    #texto-information{
+        display: block;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #imagen-information{
+        display: none;
+    }
+
+    #texto-information{
+        background-color: rgb(244,244,244);
+        background-color: rgba(244,244,244,.6);
+        background-size: inherit;
+        height: 100%;
+        padding-bottom: 60px;
+        width: 100%;
+    }
+
+    #productos-carrito{
+        width: 100%;
+    }
+
+    #direcciones-carrito{
+        width: 100%;
+    }
+
+    .campos-direccion{
+        width: 100%;
+    }
+
+    .totales-carrito{
+        width: 100%;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    #opciones-carrito span{
+        display: none;
+    }
+
+    #colections .wrapper h2 {
+        letter-spacing: 6px;
+        text-align: left;
+    }
+
+    #menu-inferior{
+        display: none;
+    }
+
+    #menu-superior{
+        display: block;
+    }
+
+    #menu{
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgba(231,221,210,.95);
+        height: 100vh;
+        left: -5.5%;
+        overflow-y: scroll;
+        padding: 60px 0;
+        top: 0px;
+        width: 100vw;
+        position: fixed;
+    }
+
+    #menu.visible{
+        left: 0px;
+
+        display: block;
+        visibility: visible;
+        opacity: 1;
+
+        transition: 1s;
+    }
+
+    #menu.menu a,
+    .menu a.mobile{
+        border-bottom: 1px solid #181818;
+        display: block;
+        font-size: 1.5em;
+        margin: 0 10%;
+        padding: 2% 0;
+        width: 80%;
+    }
+
+     #redes-mobile{
+        display: block;
+        margin: 10px 10%;
+    }
+
+    #newsletter{
+        display: none;
+    }
+
+    #menu.menu a#newsletter-mobile{
+        display: block;
+    }
+
+    #menu.menu #redes-mobile a{
+        display: inline;
+        border: 0;
+        margin: 0;
+        margin-right: 8px;
+    }
+
+    #redes{
+        left:unset;
+        right: 0;
+    }
+
+    #home video{
+        left: -50%;
+    }
+}

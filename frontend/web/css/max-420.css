@@ -1,0 +1,37 @@
+@media all and (max-width: 420px) {
+    #stockists {
+        background-position: 85% center;
+    }
+
+    #stockists #contenido-stockists{
+        width: 90%;
+    }
+
+    #contenido-stockists h2{
+        font-size: 1.4em;
+        margin-left: 0;
+    }
+
+    #info-taller-blanco #texto-taller .titulo h2{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    #imagen-taller-mobile{
+        background-size: 130% auto;
+        height: 200px;
+    }
+
+    #newsletter{
+        display: none;
+    }
+
+    /* #redes{
+        display: none;
+    } */
+
+
+    #contributors .wrapper{
+        padding: 7% 0;
+    }
+}

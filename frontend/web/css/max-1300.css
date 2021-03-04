@@ -1,0 +1,45 @@
+@media all and (max-width: 1300px) {
+    .menu a{
+        /* font-size: .8em; */
+        padding: 0 5px;
+    }
+
+    #bolsa img{
+        width: 20px;
+    }
+
+    #redes a img {
+        height: 80%;
+    }
+
+    #texto-taller{
+        padding: 7% 7% 7%;
+    }
+
+    #info-taller-blanco #coming-soon div{
+        left: 20%;
+    }
+
+    #stockists #contenido-stockists{
+        width: 550px;
+    }
+
+    #stockist-1{
+        padding-right: 40%;
+    }
+
+    #stockist-2{
+        padding-right: 35%;
+    }
+
+    #stockist-3{
+        padding-right: 30%;
+    }
+
+    #stockist-4{
+        padding-right: 25%;
+    }
+    #imagen-taller{
+        background-position: left top;
+    }
+}

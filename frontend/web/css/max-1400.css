@@ -1,0 +1,29 @@
+@media all and (max-width: 1400px) {
+    html, body{
+        font-size: 16px;
+    }
+
+    #stockists #contenido-stockists{
+        right: 0;
+    }
+
+    #stockist-1{
+        padding-right: 45%;
+    }
+
+    #stockist-2{
+        padding-right: 40%;
+    }
+
+    #stockist-3{
+        padding-right: 35%;
+    }
+
+    #stockist-4{
+        padding-right: 30%;
+    }
+
+    #info-taller-blanco #texto-taller .contenido{
+        padding: 0 5%;
+    }
+}

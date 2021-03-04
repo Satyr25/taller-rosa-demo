@@ -1,0 +1,145 @@
+@media all and (max-width: 600px) {
+    h2 {
+        font-size: 1.2em;
+        letter-spacing: 12px;
+    }
+
+    #home{
+        background-image: url('../images/home.png');
+        background-position: top;
+        background-size: cover;
+    }
+
+    .logotipo {
+        bottom: 25%;
+    }
+
+    #logotipo{
+        display: none;
+    }
+
+    #logotipo-blanco{
+        display: block;
+    }
+
+    #stockists {
+        background-position: 80% center;
+    }
+
+    #stockists #contenido-stockists{
+        width: 80%;
+        margin-left: 15%;
+    }
+
+    #contributors h2{
+        padding-top: 50px;
+        text-align: center;
+        letter-spacing:
+    }
+
+    .contributor{
+        height: auto;
+        width: 100%;
+    }
+
+    .contributor#cb,
+    .contributor#rdl{
+        left: 0 !important;
+    }
+
+    .contributor img.desktop{
+        display: none;
+    }
+
+    .contributor img.mobile{
+        display: block;
+        height: auto;
+        width: 90%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .contributor div{
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .contributor div span{
+        font-size: .7em;
+        text-align: center;
+    }
+
+    #texto-information h2{
+        font-size: 1.2em;
+    }
+
+    footer.footer{
+        z-index: 1;
+    }
+
+    #imagen-taller-mobile{
+        background-size: 130% auto;
+        height: 400px;
+    }
+
+    #contenido-stockists h2{
+        margin-left: 25%;
+    }
+
+    #stockist-1 {
+        padding-right: 32%;
+    }
+
+    #stockist-2 {
+        padding-right: 27%;
+    }
+
+    #stockist-3 {
+        padding-right: 22%;
+    }
+
+    #stockist-4 {
+        padding-right: 17%;
+    }
+
+    .titulo-coleccion{
+        margin-bottom: 30px;
+    }
+
+    .colection .mfp-content {
+        width: 100%;
+    }
+
+    #datos-producto {
+        padding: 0 5%;
+    }
+
+    #texto-information{
+        padding-top: 20%;
+    }
+    .full-screen2{
+        padding-top: 100vh;
+    }
+
+    .contributor#jdr{
+        background-position: center;
+        background-size: 70%;
+        height: 225px;
+    }
+    .contributor-jdr{
+        position: absolute;
+        bottom: -35px;
+        margin: 0;
+/*        left: 26%;*/
+        padding: 0 !important;
+    }
+    .img-contributor{
+        margin: auto;
+        margin-bottom: 5px;
+    }
+    .footer{
+        padding-top: 70px;
+    }
+}

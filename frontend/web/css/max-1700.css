@@ -1,0 +1,8 @@
+@media all and (max-width: 1700px) {
+    #home{
+        background-size: 100% 100%;
+    }
+    #stockists #contenido-stockists{
+        right: 0;
+    }
+}

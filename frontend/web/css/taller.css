@@ -1,0 +1,2355 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/crinsom/CrimsonText-Regular.eot');
+    src: url('../fonts/crinsom/CrimsonText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/crinsom/CrimsonText-Regular.woff2') format('woff2'),
+        url('../fonts/crinsom/CrimsonText-Regular.woff') format('woff'),
+        url('../fonts/crinsom/CrimsonText-Regular.ttf') format('truetype'),
+        url('../fonts/crinsom/CrimsonText-Regular.svg#CrimsonText-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Freight';
+    src: url('../fonts/freight/Freight-DispBook.eot');
+    src: url('../fonts/freight/Freight-DispBook.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/freight/Freight-DispBook.woff2') format('woff2'),
+        url('../fonts/freight/Freight-DispBook.woff') format('woff'),
+        url('../fonts/freight/Freight-DispBook.ttf') format('truetype'),
+        url('../fonts/freight/Freight-DispBook.svg#Freight-DispBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freight';
+    src: url('../fonts/freight/Freight-DispBold.eot');
+    src: url('../fonts/freight/Freight-DispBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/freight/Freight-DispBold.woff2') format('woff2'),
+        url('../fonts/freight/Freight-DispBold.woff') format('woff'),
+        url('../fonts/freight/Freight-DispBold.ttf') format('truetype'),
+        url('../fonts/freight/Freight-DispBold.svg#Freight-DispBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/avenir/AvenirLTStd-Light.eot');
+    src: url('../fonts/avenir/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/avenir/AvenirLTStd-Light.woff2') format('woff2'),
+        url('../fonts/avenir/AvenirLTStd-Light.woff') format('woff'),
+        url('../fonts/avenir/AvenirLTStd-Light.ttf') format('truetype'),
+        url('../fonts/avenir/AvenirLTStd-Light.svg#AvenirLTStd-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Avenir';
+    letter-spacing: 17px;
+}
+
+h2{
+    font-size: 2.0em;
+}
+
+html, body{
+    background-color: #fff;
+    color: #181818;
+    font-family: 'Avenir';
+    font-size: 18px;
+    height: 100%;
+    text-align: justify;
+    margin: 0 !important;
+}
+
+body{
+    min-height: 100%;
+}
+
+.wrap > .container{
+    padding: 0;
+    width: 85%;
+}
+.wrap-gris{
+    background-color: #dfdfe1;
+}
+
+a{
+    color: #181818;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:link{
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 90%;
+}
+.wrapper-bed{
+    margin: 50px auto 100px;
+    width: 90%;
+}
+
+.hover .out{
+    display: inline-block;
+}
+
+.hover .in{
+    display: none;
+}
+
+.hover:hover .out{
+    display: none;
+}
+
+.hover:hover .in{
+    display: inline-block;
+}
+
+#main-header{
+    padding: 30px 0;
+    position: relative;
+    z-index: 10;
+}
+
+#main-header .wrapper{
+    position: relative;
+}
+
+.desplegar-menu{
+    display: block;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    transition: all .3s linear;
+    width: 40px;
+    z-index: 100000;
+}
+
+#menu-superior{
+    left: 0px;
+    display: none;
+}
+
+#menu-inferior{
+    right: 0px;
+}
+
+.desplegar-menu::before{
+    background-color: #181818;
+    content: "";
+    height: 2px;
+    left: 6px;
+    position: absolute;
+    transition: all .3s linear;
+    top: 10px;
+    width: 20px;
+}
+
+.desplegar-menu.desplegado::before{
+    background-color: #181818;
+    -ms-transform: rotate(45deg) translate(3px,2px);
+    transform: rotate(45deg) translate(3px,2px);
+}
+
+#menu{
+    /* display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+    transition: 1s; */
+
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    left: 45px;
+    transition: 1s;
+}
+
+#menu.visible{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    left: 45px;
+    transition: 1s;
+}
+
+.menu a{
+    color: #181818;
+    display: inline-block;
+    font-family: 'Avenir';
+    font-size: .65em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+.menu a.mobile{
+    display: none;
+}
+
+#opcion-colecciones{
+    display: inline;
+    position: relative;
+}
+
+#listado-colecciones{
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 400px;
+}
+#opcion-colecciones:hover #listado-colecciones{
+    display: block;
+}
+
+#listado-colecciones a{
+    display: block;
+    font-size: .7em;
+    padding-top: 5px;
+    text-align: left;
+}
+
+#listado-colecciones > a:nth-child(1){
+    display: none;
+}
+#listado-colecciones2{
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 400px;
+}
+
+#opcion-colecciones:hover #listado-colecciones2{
+    display: block;
+}
+
+#listado-colecciones2 a{
+    display: block;
+    font-size: .7em;
+    padding-top: 5px;
+    text-align: left;
+}
+
+#menu.menu a#newsletter-mobile{
+    display: none;
+}
+/*
+#listado-colecciones2 > a:nth-child(2){
+    display: none;
+}
+*/
+
+#bolsa{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#bolsa span{
+    display: block;
+    font-family: 'Avenir';
+    font-weight: bold;
+    font-size: 0.8em;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    top: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+footer.footer{
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    z-index: 10;
+}
+
+footer.footer .wrapper{
+    position: relative;
+}
+
+.btn-taller{
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    color: #000;
+    display: inline-block;
+    font-family: 'Avenir';
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s linear;
+}
+
+.btn-taller:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#logo{
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    width: 25px;
+}
+
+#logo img{
+    width: 100%;
+}
+
+#logo_blanco{
+    display: none;
+}
+
+.stockists #logo_negro,
+.home #logo_negro{
+    display: none;
+}
+
+.stockists #logo_blanco,
+.home #logo_blanco{
+    display: inline;
+}
+
+#menu-footer{
+    position: absolute;
+    visibility: hidden;
+    right: 0px;
+    opacity: 0;
+    display: block;
+    transition: 1s;
+}
+
+#menu-footer.visible{
+    position: absolute;
+    visibility: visible;
+    right: 45px;
+    opacity: 1;
+    display: block;
+    transition: 1s;
+}
+
+#redes{
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+#redes a{
+    display: inline-block;
+    height: 20px;
+    margin: 0 4px;
+    text-align: center;
+    width: 20px;
+}
+
+#redes a img{
+    height: 90%;
+}
+
+#redes a .red-black{
+    display: inline;
+}
+
+#redes a .red-white{
+    display: none;
+}
+
+.home #redes a .red-black{
+    display: none;
+}
+
+.home #redes a .red-white{
+    display: inline;
+}
+#redes .red-black{
+    display: inline-block;
+}
+
+#redes .red-white{
+    display: none;
+}
+
+.home #redes .red-black{
+    display: none;
+}
+
+.home #redes .red-white{
+    display: inline-block;
+}
+
+#redes-mobile{
+    display: none;
+}
+
+.full-screen{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.full-screen-sust{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+}
+.full-screen2{
+    height: auto;
+    left: 0;
+    position: relative;
+    padding-top: 85vh;
+    width: 100%;
+}
+
+body, html {
+   height: 100%;
+}
+
+#home{
+    background: url('../images/home.png');
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#home .ytplayer-container,
+#home #ytplayer-shield{
+    display: none;
+}
+
+.logotipo{
+    bottom: 38%;
+    position: absolute;
+    right: 15%;
+    width: 17%;
+}
+
+#logotipo{
+    display: block;
+}
+
+#logotipo-blanco{
+    display: none;
+}
+
+#info-taller{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#texto-taller,
+#imagen-taller{
+    display: table-cell;
+    width: 50%;
+}
+
+#texto-taller{
+    background-color: #B9B6C1;
+    color: #fff;
+    padding: 7% 10% 7%;
+    vertical-align: top;
+}
+
+#texto-taller h2{
+    font-weight: normal !important;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#imagen-taller,#imagen-taller-mobile{
+    background-image: url('../images/taller.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+
+#imagen-taller-mobile{
+    display: none;
+}
+
+#imagen-taller-mobile h2{
+    margin: 0;
+    padding-left: 10%;
+    padding-top: 60px;
+}
+
+#taller-blanco{
+    background-image: url('../images/taller_blanco_fondo.jpg');
+    background-size: cover;
+    background-position: bottom left;
+    z-index: 9;
+}
+
+#coming-soon{
+    display: table-cell;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+#info-taller-blanco{
+    height: 100%;
+    width: 100%;
+}
+
+#info-taller-blanco > div{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#info-taller-blanco #texto-taller,
+#info-taller-blanco #coming-soon{
+    display: table-cell;
+    font-family: 'Avenir';
+    width: 50%;
+}
+
+#info-taller-blanco #coming-soon{
+    position: relative;
+}
+
+#info-taller-blanco #texto-taller{
+    background-color: transparent;
+    vertical-align: baseline;
+}
+
+#info-taller-blanco #texto-taller .titulo{
+    position: absolute;
+    top: 15%;
+}
+
+#info-taller-blanco #texto-taller .titulo h2{
+    font-size: 2em;
+}
+
+#info-taller-blanco #texto-taller .contenido p{
+    font-family: 'Avenir';
+}
+
+#info-taller-blanco #texto-taller .contenido{
+    bottom: 15%;
+    max-width: 600px;
+    position: absolute;
+    width: 90%;
+}
+
+#info-taller-blanco #coming-soon div{
+    bottom: 20%;
+    color: #fff;
+    font-family: 'Avenir';
+    left: 10%;
+    letter-spacing: 10px;
+    position: absolute;
+    width: 85%;
+    border: 1px solid white;
+}
+
+#hemp-cotton{
+    color: #fff;
+    display: block;
+    font-family: 'Avenir';
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    outline: none;
+    border: 2px solid white;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#hemp-cotton-text{
+    display: table;
+    width: 100%;
+}
+
+#hemp-text, #cotton-text{
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    width: 50%;
+}
+
+#hemp-text::after{
+    content: 'V';
+    font-family: 'Avenir';
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+#cotton-text::before{
+    content: 'S';
+    font-family: 'Avenir';
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+#hemp-cotton-text .material{
+    font-family: 'Avenir';
+    font-size: 2em;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#hemp-cotton-text .argumento{
+    font-size: .9em;
+    padding: 0 20%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#cotton-text .argumento{
+    padding: 0 5%;
+}
+
+body.stockists{
+    background-image: url('../images/stockists.jpg');
+    background-size: 100% auto;
+    background-position: right top;
+}
+
+#stockists #contenido-stockists{
+    position: absolute;
+    right: 5%;
+    top: 16%;
+    width: 650px;
+}
+
+#contenido-stockists .stockist{
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+#contenido-stockists h2{
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+#contenido-stockists .stockist .nombre,
+#contenido-stockists .stockist .direccion{
+    font-size: 0.8em;
+    line-height: 1em;
+    text-align: right;
+}
+
+#contenido-stockists .stockist .nombre{
+/*    font-weight: bold;*/
+    margin-bottom: 5px;
+    letter-spacing: 5px;
+}
+#contenido-stockists .stockist .nombre > a:hover{
+    color: #9b949a;
+}
+#contenido-stockists .stockist .nombre > a{
+    text-align: right;
+    color: white;
+    font-size: 18px;
+}
+
+#contenido-stockists .stockist .direccion a{
+    display: block;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 5px;
+    text-align: right;
+}
+
+#stockist-1{
+    padding-right: 45%;
+}
+
+#stockist-2{
+    padding-right: 40%;
+}
+
+#stockist-3{
+    padding-right: 35%;
+}
+
+#stockist-4{
+    padding-right: 30%;
+}
+
+#information > div{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#texto-information{
+    display: table-cell;
+    width: 50%;
+}
+
+#imagen-information{
+    display: table-cell;
+    width: 50%;
+}
+
+#texto-information{
+    background-color: #f5f5f5;
+    padding: 10% 5% 0 5%;
+    vertical-align: top;
+}
+
+#texto-information h2{
+    font-size: 2.5em;
+    font-weight: normal !important;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#imagen-information{
+    background-image: url('../images/informacion.jpg');
+    background-size: cover;
+    background-position: bottom left;
+}
+
+.information{
+    margin-bottom: 20px;
+}
+
+.opcion-information{
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+}
+
+.opcion-information:hover,
+.opcion-information.desplegado{
+    color: #635e5a;
+}
+
+.opcion-information:hover::before,
+.opcion-information:hover::after,
+.opcion-information.desplegado::before,
+.opcion-information.desplegado::after{
+    background-color: #635e5a;
+}
+
+.opcion-information::before{
+    background-color: #181818;
+    content: '';
+    height: 2px;
+    position: absolute;
+    opacity: 1;
+    right: -25px;
+    top: 11px;
+    transition: all .3s linear;
+    width: 13px;
+}
+
+.opcion-information::after{
+    background-color: #181818;
+    content: '';
+    height: 13px;
+    position: absolute;
+    right: -20px;
+    top: 6px;
+    transition: all .3s linear;
+    width: 2px;
+}
+
+.opcion-information.desplegado::before{
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.opcion-information.desplegado::after{
+    transform: rotate(90deg);
+}
+
+#info-contact{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#imagen-contact{
+    background-image: url('../images/tr_contacto.jpg');
+    background-position: center;
+    background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+#imagen-sustainability{
+    background-image: url('../images/sustainability.jpg');
+    background-position: center;
+    background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+.fondo-contact{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+#contact{
+    background-color: #c6c5bf;
+}
+
+#texto-contact{
+    background-color: #c6c5bf;
+    display: table-cell;
+    padding: 0 10% 0 16%;
+    vertical-align: middle;
+    width: 50%;
+}
+
+#texto-contact div{}
+
+body.imagery .wrap{
+    background-color: #dfdfe0;
+}
+
+#imagery h2{
+    margin-bottom: 100px;
+    padding: 4% 6% 0;
+}
+
+#imagery #imagenes img{
+    display: block;
+    margin: 0 auto 60px;
+    max-width: 1000px;
+    width: 50%;
+}
+
+.texto-imagery{
+    margin: 50px 0;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+.texto-press{
+    text-align: center;
+    margin: 10px 0;
+}
+.texto-press:last-child{
+    margin-bottom: 10vh;
+}
+.texto-imagery a{
+    font-size: 1em;
+}
+
+body.press .wrap{
+    background-color: #f9f9f9;
+}
+
+.press-post{
+    border-bottom: 1px solid #807f7b;
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 90%;
+}
+
+.press-post.ultimo{
+     border: 0;
+}
+
+.press-post .titulo{
+    font-family: 'Avenir';
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: center;
+}
+
+.press-post .fecha{
+    font-size: 0.8em;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.press-post .imagen img{
+    width: 100%;
+}
+
+.press-post .texto{
+    margin-top: 30px;
+}
+
+.press-post .texto .read-more{
+    display: block;
+    font-size: .9em;
+    margin-top: 10px;
+    text-align: center;
+    color: #181818;
+
+}
+
+.press-post .texto .more{
+    display: none;
+}
+
+body.contributors .wrap{
+    background-color: white;
+}
+
+#contributors .wrapper{
+    height: 100%;
+    padding: 7% 0;
+}
+
+#datos-contributors{
+    height: 100%;
+    position: relative;
+    padding-top: 8%;
+}
+
+.contributor{
+    display: table;
+}
+
+.contributor-jdr{
+    padding-left: 100px !important;
+    
+}
+.contributor-jf{
+/*    padding-left: 180px !important;*/
+    
+}
+.contributor div{
+    font-family: 'Avenir';
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    line-height: .8em;
+    padding-left: 115px;
+    position: relative;
+    top: -78px;
+    left: 23px;
+}
+
+.contributor > span{
+    display: block;
+    font-family: 'Avenir';
+    letter-spacing: 0;
+    text-align: center;
+}
+.contributor > span:first-child{
+    font-family: 'Avenir';
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    line-height: .8em;
+    position: relative;
+    display: block;
+}
+
+.contributor img.desktop{
+    display: block;
+    height: 100%;
+}
+
+.contributor img.mobile{
+    display: none;
+}
+
+.img-contributor{
+    max-width: 270px;
+    max-height: 24vh;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.contributor#jdr{
+
+}
+
+.contributor#cb{
+/*
+    left: 39%;
+    top: 10%;
+*/
+}
+
+.contributor#jf{
+/*
+    left: 72%;
+    top: 10%;
+    background-image: url('../images/contributors/nikki_stoumen.jpg');    
+    background-position: left center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+*/
+}
+
+.contributor#rdl{
+    bottom: 15%;
+    right: 0;
+}
+
+.titulo-coleccion{
+    margin-bottom: 50px;
+}
+
+.titulo-coleccion span{
+    font-size: 0.7em;
+}
+
+.grid-productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-auto-rows: minmax(100px, auto); */
+    grid-template-areas:
+      "pr1 pr2 pr3 pr3"
+      "pr4 pr4 pr3 pr3"
+      "pr4 pr4 pr5 pr6"
+      "pr7 pr7 pr8 pr8"
+      "pr7 pr7 pr8 pr8";
+    margin: 0 auto;
+}
+.grid-productos:last-child{
+    margin-bottom: 70px;
+}
+
+
+.grid-productos > div{
+    border: 15px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AAA;
+    overflow: hidden;
+}
+.opacidad{
+    z-index: -1;
+    color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.opacidad:hover{
+    background-color: rgba(24, 24, 24, 0.7);
+    color: white;
+}
+.grid-producto-nombre{
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 10px;
+    position: relative;
+    top: 25%;
+}
+.grid-producto-details{
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    top: 25%;
+}
+
+.grid-productos div a{
+    /* background-size: auto 100%; */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-productos div img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.pr1{
+    grid-area: pr1;
+}
+
+.pr2{
+    grid-area: pr2;
+}
+
+.pr3{
+    grid-area: pr3;
+}
+
+.pr4{
+    grid-area: pr4;
+}
+
+.pr5{
+    grid-area: pr5;
+}
+
+.pr6{
+    grid-area: pr6;
+}
+
+.pr7{
+    grid-area: pr7;
+}
+
+.pr8{
+    grid-area: pr8;
+}
+.pro1{
+    grid-area: pro1;
+}
+.pro2{
+    grid-area: pro2;
+}
+.pro3{
+    grid-area: pro3;
+}
+.pro4{
+    grid-area: pro4;
+}
+
+.carousel{
+    float: left;
+    width: 50%;
+}
+
+.carousel-inner > .item{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.carousel-control.right,
+.carousel-control.left{
+    background-image: none;
+    color: #181818;
+    font-size: 80px;
+    top: 45%;
+    width: 10%;
+}
+
+.carousel-inner > .item > img{
+    margin: 0 auto;
+}
+
+#datos-producto{
+    float: right;
+    padding: 0 8%;
+    width: 50%;
+}
+
+#datos-producto .nombre-producto{
+    font-family: 'Avenir';
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#datos-producto-bed{
+    float: right;
+    padding: 0 8%;
+    width: 50%;
+    position: relative;
+/*    top: -20vh;*/
+}
+
+#datos-producto-bed .nombre-producto{
+    font-family: 'Avenir';
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.nombre-producto{
+    font-weight: bold;
+}
+.subtitle-related{
+    font-weight: bold;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+}
+
+#datos-producto .precio-producto{
+    font-family: 'Avenir';
+    font-size: .9em;
+}
+
+#datos-producto .descripcion-producto{
+    font-family: 'Avenir';
+    font-size: .9em;
+    line-height: 1.5em;
+/*    margin-top: 50px;*/
+}
+#datos-producto-bed .precio-producto{
+    font-family: 'Avenir';
+    font-size: .9em;
+}
+
+#datos-producto-bed .descripcion-producto{
+    font-family: 'Avenir';
+    font-size: .9em;
+    line-height: 1.5em;
+/*    margin-top: 50px;*/
+}
+
+.descripcion-producto{
+    text-align: justify;
+}
+.predescripcion-producto{
+    font-family: 'Avenir';
+    font-size: .9em;
+    line-height: 1.5em;
+    margin-top: 50px;
+    text-align: justify;
+}
+.botones-cambio-guia{
+    margin: 10px 0;
+}
+.ver-descripcion{
+    font-family: 'Avenir';
+    font-size: .9em;
+    line-height: 1.5em;
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+    border-right: 1px solid black;
+}
+.ver-guia{
+    font-family: 'Avenir';
+    font-size: .9em;
+    line-height: 1.5em;
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+}
+.ver-descripcion:hover{
+    cursor: pointer;
+}
+.ver-guia:hover{
+    cursor: pointer;
+}
+.guia-tallas{
+    display: none;
+}
+.selected{
+    font-weight: bold;
+}
+
+#agregar-carrito{
+    margin-top: 30px;
+}
+
+#agregarform-color_id{
+    float: left;
+    width: 48%;
+}
+
+#agregarform-talla_id{
+    float: right;
+    width: 48%;
+}
+
+#agregar-carrito select{
+    border: 1px solid #e2e2e3;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: 'Avenir';
+    font-size: .9em;
+    padding: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+#agregar-carrito button{
+    margin-top: 30px;
+    width: 100%;
+}
+
+#agregar-carrito .spinner,.totales-carrito .spinner{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #333;
+
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+#agregar-carrito .help-block-error{
+    display: none !important;
+}
+
+#respuesta-carrito{
+    border: 1px solid #000;
+    font-family: 'Avenir';
+    margin-top: 140px;
+    padding: 15px;
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#view-more{
+    margin: 50px 0;
+    text-align: center;
+}
+
+#view-more a{
+    font-family: 'Avenir';
+    font-size: .8em;
+}
+
+#mas-productos .grid-productos div{
+    opacity: .5;
+    transition: all .3s linear;
+}
+
+#mas-productos .grid-productos div:hover{
+    opacity: 1;
+}
+
+body.cart{
+    background-color: #e2e2e3;
+    height:auto;
+}
+
+#opciones-carrito a{
+    border-bottom: 3px solid #c6c5bf;
+    display: inline-block;
+    float: left;
+    font-family: 'Avenir';
+    text-align: center;
+    width: 25%;
+}
+
+#opciones-carrito a.seleccionado,
+#opciones-carrito a:hover{
+    border-bottom: 3px solid #878681;
+    color: #878681;
+}
+
+#opciones-carrito a:visited,
+#opciones-carrito a:link{
+    color: #878681;
+}
+
+.totales-carrito a:link,
+.totales-carrito a:visited{
+    color: black;
+}
+
+.totales-carrito a:hover{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.bloque-carrito{
+    padding: 70px 0;
+}
+
+#productos-carrito{
+    float: left;
+    width: 50%;
+}
+
+#productos-carrito .producto{
+    border-bottom: 1px solid #c6c5bf;
+    padding: 50px 0;
+}
+
+#productos-carrito .color span,
+#productos-carrito .talla span{
+    font-weight: bold;
+}
+
+#productos-carrito .talla{
+    text-align: right;
+}
+
+#productos-carrito .cantidad{
+    margin-top: 50px;
+}
+
+#productos-carrito .control-cantidad{
+    display: table;
+}
+
+#productos-carrito .control-cantidad div{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+}
+
+#productos-carrito .control-cantidad .control{
+    width: 20px;
+}
+
+#productos-carrito .control-cantidad .control a{
+    display: block;
+    /* background-color: #fff; */
+    /* border: 1px solid #000; */
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: -1px;
+}
+
+#productos-carrito .cantidad span{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#productos-carrito .cantidad .cantidades{
+    float: left;
+}
+
+#productos-carrito .cantidad .eliminar{
+    float: left;
+    margin-top: 35px;
+    margin-left: 30px;
+}
+
+#productos-carrito .cantidad .eliminar a{
+    font-weight: bold;
+}
+
+#productos-carrito .imagen-producto{
+    float: left;
+    width: 40%;
+}
+
+#productos-carrito .imagen-producto img{
+    width: 100%;
+}
+
+.imagen-producto a{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.imagen-producto{
+    height: 200px;
+    max-width: 300px;
+    display: flex;
+}
+
+#productos-carrito .datos-producto{
+    float: left;
+    padding: 10px 10%;
+    width: 60%;
+}
+
+#productos-carrito .costo{
+    margin-top: 30px;
+}
+
+.desc-envio{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    width: 75%;
+}
+
+.costo-envio{
+    display: table-cell;
+    vertical-align: middle;
+    width: 25%;
+    text-align: right;
+}
+
+.desc-envio span{
+    display: block;
+    font-family: 'Avenir';
+    font-size: .7em;
+}
+
+.costo-envio span{
+    font-family: 'Avenir';
+    font-size: .8em;
+    text-align: right;
+}
+
+.desc-envio input{
+    font-weight: bold;
+}
+
+#envio-carrito > span{
+    font-family: 'Avenir';
+    text-transform: uppercase;
+}
+
+#envio-carrito{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c6c5bf;
+}
+
+
+.tipo-envio{
+    display: table;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.envio-gratis{
+    display: none;
+    margin: 40px 0;
+}
+
+.envio-gratis span{
+    font-family: 'Avenir';
+    text-transform: uppercase;
+    font-size: 0.6em;
+}
+
+.totales-carrito{
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+}
+
+.campo-totales{
+    display: table;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.campo-totales .nombre-campo,
+.campo-totales .valor-campo{
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.campo-totales .nombre-campo span{
+    display: block;
+    font-family: 'Avenir';
+    font-size: .7em;
+}
+
+.campo-totales .nombre-campo{
+    text-align: left;
+}
+
+.campo-totales .valor-campo{
+    font-family: 'Avenir';
+    font-size: .8em;
+    text-align: right;
+}
+
+#total-pagar{
+    border-top: 1px solid #c6c5bf;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#continuar-pago-bag, #continuar-pago-address, #continuar-pago-payment, #seguir-comprando, #regresar-home-carrito{
+    width: 100%;
+}
+#continuar-pago-bag{
+    margin-bottom: 20px;
+}
+#texto-payment{
+    font-family: 'Avenir';
+    font-size: .7em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Avenir';
+    font-weight: bold;
+    font-size: 0.9em;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #878681;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.cart .wrap .container{
+    width: 80%;
+}
+
+#terms-carrito-bag{
+    margin: 20px 0;
+    font-size: 0.7em;
+    padding: 10px;
+    font-family: 'Avenir';
+    text-align: center;
+}
+
+#terms-carrito-bag summary{
+    cursor: pointer;
+}
+
+#terms-carrito-address{
+    margin: 20px 0;
+    font-size: 0.7em;
+    padding: 10px;
+    font-family: 'Avenir';
+    text-align: center;
+}
+
+#terms-carrito-address summary{
+    cursor: pointer;
+}
+
+.oculto{
+    display: none;
+}
+
+.eliminar a:hover{
+    color: #878681;
+}
+
+#productos-carrito .control-cantidad .control a:hover{
+    color: #878681;
+}
+
+#direcciones-carrito{
+    float: left;
+    width: 50%;
+}
+
+#bloque-envio{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#bloque-facturacion{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.campos-direccion{
+    margin-top: 10px;
+    width: 50%;
+    background-color: transparent;
+    border-radius: 0px;
+    border-bottom: 2px solid #878681;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: 'Avenir';
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.campos-direccion-date{
+    margin-top: 10px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 0px;
+    border-bottom: 2px solid #878681;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-family: 'Avenir';
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.cart-same-info{
+    font-family: 'Avenir';
+    font-weight: normal;
+    margin-top: 10px;
+    font-size: 0.9em;
+
+}
+
+.address{
+    padding: 70px 0;
+}
+
+.payment{
+    padding: 70px 0;
+}
+
+/* #same-info{
+    margin-right: 10px;
+} */
+
+/* input[type=checkbox]{
+    vertical-align: middle;
+    position: relative;
+    bottom: 4px;
+} */
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .1em; left: .1em;
+  font-size: 1.4em;
+  line-height: 0.8;
+  color: #878681;
+  transition: all .2s;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9!important;
+}
+
+#regresar-bag:hover{
+    color: #878681;
+}
+
+#pagos-carrito{
+    float: left;
+    width: 50%;
+}
+
+#confirmation-carrito{
+    float: left;
+    width: 50%;
+}
+
+.payment-dropdown{
+    background-color: transparent;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 2px solid #878681;
+    font-size: 0.8em;
+    padding: 5px 20px;
+    margin-right: 20px;
+    font-family: 'Avenir';
+}
+
+.divisiones-pay{
+    margin: 15px 0;
+}
+
+.cart > .wrap{
+    min-height: 100vh;
+}
+
+.label-payment{
+    font-size: 0.8em;
+    font-family: 'Avenir';
+}
+
+#dir-envio-carrito span{
+    text-transform: uppercase;
+}
+
+#pagos-carrito span{
+    text-transform: uppercase;
+}
+
+#confirmation-title{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#confirmation-p{
+    font-family: 'Avenir';
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.confirmation{
+    padding: 70px 0;
+}
+
+.desplegar-menu:hover::before{
+    background-color: #878681;
+}
+
+.home .desplegar-menu:hover::before{
+    background-color: #fff;
+}
+
+.home #menu a:hover,.home #menu-footer a:hover,.home #redes a:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+
+#menu a:hover, #menu-footer a:hover, #redes a:hover{
+    color: #878681;
+    transition: 0.3s;
+}
+
+.home #menu-footer a{
+    color: #fff;
+}
+
+#formulario-carrito option{
+    font-family: 'Avenir';
+}
+
+.carousel-control.right, .carousel-control.left{
+    font-size: 0px;
+    opacity: 1;
+    width: 33px;
+}
+
+.carousel-control.right{
+    background-image: url(../images/next.png) !important;
+    background-repeat: no-repeat !important;
+}
+
+.carousel-control.left{
+    background-image: url(../images/back.png) !important;
+    background-repeat: no-repeat !important;
+}
+
+.carousel-control.right:hover{
+    background-image: url(../images/next_over.png) !important;
+    background-repeat: no-repeat !important;
+}
+
+.carousel-control.left:hover{
+    background-image: url(../images/back_over.png) !important;
+    background-repeat: no-repeat !important;
+}
+
+.error-producto{
+    color: red;
+    font-size: 0.8em;
+    text-align: center;
+    padding-top: 40px;
+}
+.error-sold{
+    color: red;
+    font-size: 0.8em;
+    text-align: center;
+    display: none;
+}
+.success-sold{
+    color: green;
+    font-size: 0.8em;
+    text-align: center;
+    display: none;
+}
+.field-soldemail-email{
+    margin: 0 !important;
+}
+
+.error-carrito{
+    color: red;
+    font-size: 0.8em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.colection .mfp-close-btn-in .mfp-close{
+    color: black;
+}
+.taller .mfp-close-btn-in .mfp-close{
+    color: black;
+}
+
+.cart .mfp-content{
+    background-color: white;
+    padding: 30px 0;
+    width: 80%;
+}
+
+.cart .mfp-close-btn-in .mfp-close{
+    color: black;
+}
+.my-mfp-zoom-in2 > div > .mfp-content{
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+}
+.colection .mfp-content{
+    background-color: white;
+    padding: 30px 0;
+    width: 80%;
+}
+.taller .mfp-content{
+    background-color: white;
+    padding: 30px 0;
+    width: 80%;
+}
+
+.carousel-indicators{
+    visibility: hidden;
+}
+
+#espacio-title{
+    display: none;
+}
+
+
+#stockists.full-screen{
+    height: auto;
+}
+
+.scroll-hide{
+    overflow: hidden;
+}
+
+.btn-taller.agregado{
+    width: 49%;
+    float: left;
+    font-size: 12px;
+    /* margin: 0 5px; */
+}
+
+.botones-agregar-carrito{
+    margin-top: 10px;
+}
+
+.botones-agregar-carrito a{
+    padding: 15px 15px;
+
+}
+
+#cerrar-color{
+    margin-right: 2%;
+}
+
+.bloque-information{
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+#home video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.container-titulo-taller{
+    position: absolute;
+    top: 23%;
+    right: 12%;
+    width: auto;
+}
+.titulo-taller-blanco{
+    color: black;
+    letter-spacing: 10px;
+    font-size: 28px;
+}
+.pop-size2{
+    color: black;
+    letter-spacing: 8px;
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+.pop-size2:hover,
+.pop-size2:focus{
+    color: black;
+}
+.container-texto-taller{
+    font-family: 'Avenir';
+    position: relative;
+    top: 52%;
+    color: white;
+}
+.row-taller-texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.colections{
+    padding-top: 87vh;
+}
+
+
+.grid-productos2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-auto-rows: minmax(100px, auto); */
+    grid-template-areas:
+      "pro1 pro2"
+      "pro1 pro4"
+      "pro3 pro4";
+    margin: 0 auto;
+}
+.grid-productos2:last-child{
+    margin-bottom: 70px;
+}
+.grid-productos2 > div{
+    border: 15px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AAA;
+    overflow: hidden;
+}
+.grid-productos2 div a{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-productos2 div img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.taller-blanco-texto{
+    color: black;
+    z-index: 1;
+}
+.pop-size{
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+    letter-spacing: 8px;
+}
+.pop-size:hover{
+    cursor: pointer;
+    color: #968E8A;
+}
+.img-eco{
+    max-width: 30px;
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    display: inline-block;
+}
+.row-press{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    -webkit-flex: 1 1 auto;
+}
+.img-press{
+    padding: 15px;
+    margin: 0 -1px;
+}
+.popup-press:hover{
+    cursor: pointer;
+}
+.frame-video-press{
+    width: 100%;
+    height: 550px;
+}
+.div-descuento{
+    display: none;
+}
+.eco-checkout{
+    max-width: 50px;
+}
+.contenedor-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-contributors{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2vh 20px;
+}
+.contributor-name{
+    font-family: 'Avenir';
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    line-height: .8em;
+    position: relative
+}
+.image-bed:hover{
+    opacity: 0.7;
+}
+.image-bed{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    margin-bottom: 12px;
+}
+.bed-link:hover{
+    color: #181818;
+}
+.bed-description:first-of-type{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.bed-description{
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.wrap-index-bed{
+    margin-bottom: 35px;
+    text-align: center;
+    padding: 0 5px;
+}
+.bed-title{
+    font-family: 'Avenir';
+    text-transform: uppercase;
+    margin: 20px 0 50px;
+    font-size: 2em;
+    letter-spacing: 17px;
+    padding-left: 10%;
+}
+.row-wrap-bed{
+    padding-bottom: 50px;
+}
+.foto-slider-bed{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 6px;
+}
+#slider-fotos-bed{
+    height: 70vh;
+    width: 50%;
+    float: left;
+    padding: 0 40px 10px;
+}
+#thumb-fotos-bed{
+    width: 50%;
+    height: 7vh;
+    padding: 0 46px;
+}
+.wrap-slider-bed{
+    
+}
+
+.slick-next:hover{
+    background-image: url(../images/next_over.png) !important;
+}
+.slick-prev:hover{
+    background-image: url(../images/back_over.png) !important;
+}
+.slick-next{
+    background-image: url(../images/next.png) !important;
+    background-repeat: no-repeat !important;
+    font-size: 0px;
+    opacity: 1;
+    width: 33px;
+}
+.slick-prev{
+    background-image: url(../images/back.png) !important;
+    background-repeat: no-repeat !important;
+    font-size: 0px;
+    opacity: 1;
+    width: 33px;
+}
+.slick-prev, 
+.slick-next{
+    width: 35px !important;
+    height: 60px !important;
+}
+.slick-next:before,
+.slick-prev:before{
+    content: none !important;
+}
+.sust-left{
+    width: 50%;
+    position: absolute;
+    background-image: url(../images/sustainability.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.sust-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    padding: 0 5%;
+    height: 76vh;
+    overflow-y: scroll;
+    margin: 12vh 0;
+}
+.sust-title{
+    font-family: 'Avenir';
+    letter-spacing: 10px;
+    font-size: 2em;
+}
+.sust-subtitle{
+    font-weight: bold;
+    margin-top: 25px;
+}
+.sust-text{
+    text-align: justify;
+}
+.sust-text-list{
+    text-align: center;
+    margin-bottom: 0;
+}
+.sust-text-list-last{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.sust-text-mean{
+    font-weight: bold;
+    color: #929292;
+    margin-bottom: 0;
+}
+.sust-text-resume{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.let-me-know:hover{
+    background-color: #000;
+    color: #fff;
+}
+.let-me-know{
+    margin: 10px 0 0 !important;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    color: #000;
+    display: inline-block;
+    font-family: 'Avenir';
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s linear;
+}
+.sold-text{
+    font-family: 'Avenir';
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 25px 0 0;
+}
+.sold-text-2{
+    font-family: 'Avenir';
+    font-size: .9em;
+    line-height: 1.5em;
+    text-align: center;
+}
+.sold-mail{
+    display: none;
+}

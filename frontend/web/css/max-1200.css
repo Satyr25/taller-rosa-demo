@@ -1,0 +1,56 @@
+@media all and (max-width: 1200px) {
+    #home{
+        background-size: auto 100%;
+    }
+
+    #info-taller-blanco{
+        display: table;
+    }
+
+    #info-taller-blanco > div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    #info-taller-blanco #texto-taller, #info-taller-blanco #coming-soon{
+        padding: 0;
+        display: block;
+        width: 100%;
+    }
+
+    #info-taller-blanco #texto-taller .titulo,
+    #info-taller-blanco #texto-taller .contenido,
+    #info-taller-blanco #coming-soon div{
+        left: 0;
+        max-width: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    #texto-taller{
+        height: 70%;
+    }
+
+    #info-taller-blanco #texto-taller .titulo{
+        top: 10%;
+    }
+
+    #info-taller-blanco #texto-taller .contenido{
+        bottom: 25%;
+        font-size: 1.1em;
+        padding: 0 25%;
+    }
+
+    #info-taller-blanco #coming-soon div{
+        bottom: 45%;
+    }
+
+    #coming-soon{
+        height: 20%;
+    }
+
+    #opciones-carrito a{
+        font-size: 0.8em;
+    }
+
+}

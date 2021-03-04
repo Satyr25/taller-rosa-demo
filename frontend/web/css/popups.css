@@ -1,0 +1,266 @@
+.mfp-bg{
+    background-color: #fff;
+}
+
+.mfp-close-btn-in .mfp-close {
+    color: #fff;
+    font-family: 'Avenir';
+    opacity: 1;
+}
+.mfp-figure > .mfp-close{
+    top: 30px;
+    right: 0;
+    widows: 35px;
+}
+.mfp-image-holder{
+    background-color: rgba(29, 27, 33, 0.75);
+}
+.mfp-figure > .mfp-close:hover{
+    cursor: pointer;
+}
+
+#hemp-cotton-popup {
+    background: #B1A7A3;
+    color: #fff;
+    padding: 50px;
+    text-align: left;
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#newsletter-popup{
+    background-color: #fff;
+    font-family: 'Avenir';
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 40px 50px;
+    width: 90%;
+}
+
+#newsletter-popup .mfp-close{
+    color: #666;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+#newsletter-popup .titulo-newsletter{
+    border-bottom: 1px solid #e2e2e3;
+    padding-bottom: 5px;
+}
+
+#formulario-newsletter{
+    margin-top: 50px;
+}
+
+#formulario-newsletter label{
+    display: block;
+    font-size: .9em;
+    width: 100%;
+}
+
+#formulario-newsletter input{
+    border: 1px solid #e2e2e3;
+    font-family: 'Avenir';
+    font-size: .9em;
+    padding: 5px;
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid #e2e2e3;
+    box-shadow: none;
+}
+
+#personal-data{
+    font-family: 'Avenir';
+    font-size: .8em;
+    margin: 30px 0;
+}
+
+#formulario-newsletter #enviar-newsletter{
+    background-color: #fff;
+    color: #000;
+    display: block;
+    font-family: 'Avenir';
+    line-height: 1em;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s linear;
+    width: 100%;
+    border: 1px solid #e2e2e3;
+}
+
+#formulario-newsletter #enviar-newsletter:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#formulario-newsletter.oculto{
+    display: none;
+}
+
+#spinner-newsletter,
+#confirmacion-newsletter{
+    display: none;
+    font-family: 'Avenir';
+    font-size: 1.3em;
+    width: 100%;
+}
+
+#spinner-newsletter > div,
+#confirmacion-newsletter div{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#spinner-newsletter.visible,
+#confirmacion-newsletter.visible{
+    display: table;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #333;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/**
+* Fade-zoom animation for first dialog
+*/
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+    opacity: 0;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+
+    opacity: 0;
+}
+
+/* Dark overlay, start state */
+  .my-mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/**
+* Fade-move animation for second dialog
+*/
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+
+    -webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    -moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    -ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    -o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+    -webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    -moz-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    -ms-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    -o-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    transform: translateY(0) perspective( 600px ) rotateX( 0 );
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+    opacity: 0;
+
+    -webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    -moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    -ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    -o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+    opacity: 0;
+
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+  }
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+    opacity: 0;
+}

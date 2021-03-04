@@ -1,0 +1,41 @@
+@media all and (max-width: 500px) {
+    body.stockists{
+        background-position: 90% center;
+    }
+
+    #stockists #contenido-stockists{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contributor#cb,
+    .contributor#jdr,
+    .contributor#jf,
+    .contributor#rdl{
+        left: 0% !important;
+    }
+
+    #opciones-carrito a{
+        font-size: 0.6em;
+    }
+
+    #opcion-bag{
+        width: 15% !important;
+    }
+
+    #opcion-confirmation{
+        width: 35% !important;
+    }
+
+    #colections .wrapper h2 {
+        letter-spacing: 5px;
+    }
+
+    #espacio-title{
+        display: inline;
+    }
+
+    #guion-title{
+        visibility: hidden;
+    }
+}

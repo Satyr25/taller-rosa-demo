@@ -1,0 +1,51 @@
+@media all and (max-width: 950px) {
+
+    #texto-taller{
+        width: 60%;
+    }
+
+    #imagen-taller{
+        width: 40%;
+    }
+
+    #taller-blanco{
+        background-image: url('../images/taller_blanco_mobile.jpg');
+        background-position: left;
+    }
+
+    body.stockists{
+        background-size: 100% auto;
+        background-position: right center;
+    }
+
+    #stockist-1{
+        padding-right: 35%;
+    }
+
+    #stockist-2{
+        padding-right: 30%;
+    }
+
+    #stockist-3{
+        padding-right: 25%;
+    }
+
+    #stockist-4{
+        padding-right: 20%;
+    }
+
+    .cart .wrap .container{
+        width: 100%;
+    }
+
+    #colections .wrapper h2{
+        letter-spacing: 12px;
+    }
+    .container-texto-taller{
+        padding-top: 60vh;
+        position: initial;
+    }
+    .row-taller-texto{
+        display: block;
+    }
+}
